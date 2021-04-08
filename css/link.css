@@ -1,0 +1,49 @@
+.row {
+
+}
+
+.columns {
+
+}
+
+
+
+.A1 {
+	border: 3px solid steelblue;
+	text-align: center;
+	font-style: italic;
+	font-style: oblique;
+	font: American Typewriter;
+}
+.button {
+	color: black;
+	background-color: blue;
+	border: black;
+	padding: 15px 25px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.otherbutton {
+	color; black;
+	background-color: blue;
+	border: black;
+	padding: 15px 25px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.endtag{
+	font-size: 10px;
+}
+.title{
+	text-decoration: underline;
+}
+.resume{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
