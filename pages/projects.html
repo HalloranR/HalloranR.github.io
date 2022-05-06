@@ -4,34 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Title -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- project title   -->
     <title>Projects</title>
+
+    <!-- font awesome code -->
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="../plugins/owl/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../plugins/owl/assets/owl.carousel.min.css">
+
     <!-- resets browser defaults -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <!-- custom styles for all pages -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <!-- custom styles for this specific page -->
-    <link rel="stylesheet" type="text/css" href="css/resume.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>Riley Halloran</h1>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <header>
 
-    
+            <h1>Riley Halloran</h1>
+
+        </header>
+        <ul>
+            <!-- tripple bars to toggle on and off -->
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg"></i></li>
+            <li class="item"><a href="../index.html">Home</a></li>
+            <li class="item"><a href="about.html">About Me</a></li>
+            <li class="item"><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <h1>Resume</h1>
-        <p>Here is my resume, feel free to check it out!</p>
-        <iframe class="resume" src="../images/Halloran_Riley_Resume.pdf"></iframe>
-	</main>
+        <div class="box">
+            <h1>My Projects</h1>
+            <p>Here you can find a breakdown of my projects, what I worked on specifically and code examples. </p>
+        </div>
+
+
+        <div class="box">
+            <h3>Erin and the Otherworld</h3>
+            <div class="owl-carousel owl-theme">
+                <img src="../images/eo-editor.png" alt="In game editor">
+                <img src="../images/eo-constellation.png" alt="C# script for constellations">
+                <img src="../images/eo-constellation2.png" alt="C# script for constellations part 2">
+                <img src="../images/eo-playcard.png" alt="C# script for playing a card">
+                <img src="../images/eo-spawnline.png" alt="C# script for spawning a line">
+            </div>
+            <p>Here are examples of my work while creating Erin and the Otherworld. There are examples of my imports and
+                setting up public vars, a script to manage constellations the player is making, creating a card in the
+                game, and spawning lines in the game world.</p>
+        </div>
+
+        <div class="box">
+            <h3>Madness Hunters</h3>
+            <div class="owl-carousel owl-theme">
+                <img src="../images/mh_editor.jpg" alt="In game editor">
+                <img src="../images/mh-movement.png" alt="C# script for constellations">
+                <img src="../images/mh-pull.png" alt="C# script for constellations part 2">
+                <img src="../images/mh-raycast.png" alt="C# script for playing a card">
+                <img src="../images/mh-buttonpress.png" alt="C# script for spawning a line">
+            </div>
+            <p>This section covers my time working to produce madness hunters. 
+                This was back when I was still figuring out unity so it is definitely a building block but there is good code to find.
+            These scripts mostly deal with the player character, so movement, pulling companions, button presses, and raycasts.</p>
+        </div>
+    </main>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../plugins/owl/owl.carousel.min.js"></script>
+
+    <!-- link: https://owlcarousel2.github.io/OwlCarousel2/demos/responsive.html -->
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                margin: 10,
+                loop: true,
+                responsiveClass: true,
+                responsiveRefreshRate: 100,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 1,
+                        nav: true
+                    },
+                    1000: {
+                        items: 1,
+                        nav: true,
+                        loop: false
+                    }
+                },
+                nav: true
+            });
+        });
+    </script>
+
+    <footer>
+        <h4>Find Me Here:</h4>
+        <a href="https://github.com/HalloranR"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/riley-halloran-454b58a0/"><i class="fa-brands fa-linkedin"></i></a>
+    </footer>
+
+    <!-- javascript -->
+    <script>
+        // once the dropdown is toggled, add the class 'show' to each menu item to reveal it
+        // if clicked again, toggle this effect by removing the 'show' class
+        function toggleDropdown() {
+            document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
+        }
+        // On the element with the class toggle, wait for it to be clicked, then toggle the dropdown
+        document.querySelector('.toggle').addEventListener('click', toggleDropdown);
+
+
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- project title   -->
+    <title>About Me</title>
+
+    <!-- font awesome code -->
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <header>
+
+            <h1>Riley Halloran</h1>
+
+        </header>
+        <ul>
+            <!-- tripple bars to toggle on and off -->
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg"></i></li>
+            <li class="item"><a href="../index.html">Home</a></li>
+            <li class="item"><a href="projects.html">Projects</a></li>
+            <li class="item"><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="box">
+            <h1>About Me</h1>
+            <p>Growing up I always had a big passion for games.
+                In the past me and my sibilings would all sit and take turns playing on our GameCube, watching
+                eachother and taking turns.
+                As a result I knew I wanted to be a video game programmer and make the kind of games that bring
+                people and communities together. </p>
+        </div>
+        <!-- div to control the content -->
+        <div id="control">
+            <div class="box">
+                <h2>My Education</h2>
+                <p>For college I go to Indiana University, where I will graduate spring 2023. At IU I have been working
+                    hard to develop my skills.
+                    for my Undergraduate degree I decided early on to double major with a BS in Computer Science
+                    (specialization: AI) and in Game Design (specialization: programmer).
+                    I have tacked on two minors in Informatics and Mathematics to round out my skills.
+                    After completing my CS degree I moved on to an accelerated masters program where I will finish my
+                    education with a Ms in Computer Science.</p>
+
+                <h2>Work Experience</h2>
+                <p>All of my jobs that I have worked while in college have been training me in communication and
+                    management. At the moment I am a swim coach for a local team called Indiana Swim Club (ISC).
+                    My time there has been spent coaching kid in the range all the way from elementary school to
+                    highschool. Every day I make sure to choose my works carefully in order to explain how each
+                    participant can improve.
+                    This can be challenging in a group setting where children can disruptive and unresponsive but I do
+                    my best to keep the chaos under control.
+                    My one on one communication has been bolstered from my many years working for IU RecSports as a Swim
+                    Instructor. In this role I train people in private lessons where I contruct a workout and guide the
+                    participant through.
+                    This position sees me teaching individuals ranging from children to adults how to swim.
+                    Lastly I held the position of an Residential Assistant (RA) at IU during Covid19. While this role
+                    was stressful, it tought me a lot and gave me a chance to practice setting rules and expectations
+                    for everyone.
+                    Becuase of Covid there were oftern policy changes from on high that I would have to implament in ym
+                    day to day position. All of these jobs have honed my communication and management to a fine point
+                    and I feel confident in whatever role I take next.
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <h1>Where to Find</h1>
+            <p>At the moment I do not have any social media. If you wish to reach me, use the email rifhall@iu.edu,
+                or found on my
+                resume. I do have a <a href="https://www.linkedin.com/in/riley-halloran-454b58a0/">LinkedIn</a>
+                that I check on a regular basis and a <a href="https://github.com/HalloranR">Github</a> with my
+                repositiries.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <h4>Find Me Here:</h4>
+        <a href="https://github.com/HalloranR"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/riley-halloran-454b58a0/"><i class="fa-brands fa-linkedin"></i></a>
+    </footer>
+
+    <!-- javascript -->
+    <script>
+        // once the dropdown is toggled, add the class 'show' to each menu item to reveal it
+        // if clicked again, toggle this effect by removing the 'show' class
+        function toggleDropdown() {
+            document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
+        }
+        // On the element with the class toggle, wait for it to be clicked, then toggle the dropdown
+        document.querySelector('.toggle').addEventListener('click', toggleDropdown);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* page colors */
+:root {
+  --rv: #0C0A3E;
+  --pat: #641563;
+  --irr: #B33F62;
+  --orc: #F9564F;
+  --myr: #F3C677;
+  --dg: rgb(36, 36, 36);
+}
+
+/* My Fonts */
+@font-face {
+  font-family: whisper;
+  src: url(../fonts/Whisper-Regular.ttf);
+}
+
+/* page content */
+body {
+  background-color: whitesmoke;
+}
+
+main {
+  padding: 6.0rem;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* fonts */
+h1, h2, h3, h4, h5, h6, p, li, a, td, figcaption {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* also adjust margin and line-height */
+}
+
+
+
+/* Nav bar and header modifications */
+
+nav {
+  /* set the nav to the top right corner*/
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8em;
+
+  background-color: var(--dg);
+  border-bottom: 1px solid black;
+}
+
+footer{
+  padding-left: 2em;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: var(--dg);
+  border-bottom: 1px solid black;
+}
+
+.box{
+  padding: 1em;
+  margin-bottom: 3em;
+
+  background-color: var(--pat);
+  border-radius: 30px;
+  border: solid #0C0A3E 2px;
+}
+
+header{
+  /* make the header rest to the left of the screen outside of the nav*/  
+  padding-left: 2em;
+}
+
+header h1{
+  padding: 0;
+  margin: 0;
+
+  font-family: whisper;
+  font-size: 100px;
+}
+
+h1{
+  font-size: 42px;
+}
+
+h2{
+  font-size: 36;
+}
+
+h3{
+  font-size: 36;
+}
+
+nav ul{
+  position: absolute;
+  right: 1em;
+  top: 1em;
+
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+}
+
+nav ul li{
+  list-style-type: none;
+  padding: 0;
+  font-size: 24px;
+}
+
+.toggle {
+  /* add a background color for the bars and make a rounded border */
+  width: 20px;
+  margin: auto;
+}
+
+.toggle:hover{
+  color: var(--myr);
+  cursor: pointer;
+}
+
+.item a{
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.item{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+a:hover{
+  /* hover color for the links */
+  color: var(--myr);
+  cursor: pointer;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+/* adding content to the game classes */
+section{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.game1{
+
+}
+
+.resume{
+  margin: auto;
+  height: 500px;
+  width: 400px;
+}
+
+.fa-brands{
+  height: 30px;
+  width: 30px;
+}
+
+
+
+/* about me control */
+#control{
+  display: flex;
+  flex-direction: column-reverse;
+  
+}
+
+#myface{
+  height: 300px;
+  width: 300px;
+
+  background-image: url("../images/headshot.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+#myface2{
+  height: 300px;
+  width: 700px;
+
+  background-image: url("../images/headshot.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container h3{
+  padding-top: 3em;
+}
+
+section p{
+  margin-right: 1em;
+}
+
+.flip{
+  max-width: 1020px;
+  margin: 2.0em auto;
+}
+
+
+/* CAROUSEL */
+/* .owl-carousel img {
+    background: #edd7f0;
+    padding: 1rem;
+} */
+
+.owl-carousel a:hover img {
+  opacity: 0.85 !important;
+}
+
+.owl-next span,
+.owl-prev span {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  section{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #control{
+    display: flex;
+    flex-direction: row;
+  }
+  main{
+    max-width: 95%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  section{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #control{
+    display: flex;
+    flex-direction: row;
+  }
+  main{
+    max-width: 90%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  section{
+    display: flex;
+    flex-direction: row;
+  }
+  #control{
+    display: flex;
+    flex-direction: row;
+  }
+  main{
+    max-width: 85%;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  section{
+    display: flex;
+    flex-direction: row;
+  }
+  #control{
+    display: flex;
+    flex-direction: row;
+  }
+  main{
+    max-width: 85%;
+  }
+}
+
+
+/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+
+} */
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (max-width: 767.98px) {
+  
+} */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) {
+
+} */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+
+} */
+
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */
