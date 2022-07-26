@@ -268,6 +268,10 @@ No media query for `xs` since this is the default */
   main{
     max-width: 95%;
   }
+  .youtube{
+    width: 280px; 
+    height: 157.5px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -282,6 +286,10 @@ No media query for `xs` since this is the default */
   }
   main{
     max-width: 90%;
+  }
+  .youtube{
+    width: 373px; 
+    height: 210px;
   }
 }
 
@@ -298,6 +306,10 @@ No media query for `xs` since this is the default */
   main{
     max-width: 85%;
   }
+  .youtube{
+    width: 560px; 
+    height: 315px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -312,6 +324,10 @@ No media query for `xs` since this is the default */
   }
   main{
     max-width: 85%;
+  }
+  .youtube{
+    width: 560px; 
+    height: 315px;
   }
 }
 
