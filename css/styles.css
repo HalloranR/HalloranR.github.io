@@ -220,6 +220,16 @@ section{
   background-repeat: no-repeat;
 }
 
+#betterFace{
+  height: 400px;
+  width: 400px;
+
+  background-image: url("../images/APD_IULuddy_RileyHalloran01.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .container h3{
   padding-top: 3em;
 }
