@@ -84,6 +84,7 @@ footer{
 }
 
 .box{
+  
   padding: 1em;
   margin-bottom: 3em;
 
@@ -181,8 +182,8 @@ section{
 
 .resume{
   margin: auto;
-  height: 500px;
-  width: 400px;
+  width: 100%;
+  height: 100%;
 }
 
 .fa-brands{
@@ -200,14 +201,16 @@ section{
 }
 
 #myface{
-  height: 300px;
-  width: 300px;
 
   background-image: url("../images/headshot.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
+
+  
+  height: 300px;
+  width: 300px;
 }
 
 #myface2{
@@ -262,8 +265,32 @@ section p{
 
 
 /* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
-/* Extra small devices (portrait phones, less than 576px)
-No media query for `xs` since this is the default */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  nav {
+    height: 14em;
+  }
+  section{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .box{
+    padding: 5px;
+    margin-bottom: 3em;
+  }
+  #control{
+    display: flex;
+    flex-direction: row;
+  }
+  main{
+    padding: 3rem;
+    max-width: 100%;
+  }
+  .youtube{
+    width: 280px; 
+    height: 157.5px;
+  } 
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -271,21 +298,32 @@ No media query for `xs` since this is the default */
     display: flex;
     flex-direction: column-reverse;
   }
+  nav {
+    height: 14em;
+  }
+  .box{
+    padding: 5px;
+    margin-bottom: 3em;
+  }
   #control{
     display: flex;
     flex-direction: row;
   }
   main{
-    max-width: 95%;
+    padding: 3rem;
+    max-width: 100%;
   }
   .youtube{
     width: 280px; 
     height: 157.5px;
-  }
+  } 
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  nav {
+    height: 8em;
+  }
   section{
     display: flex;
     flex-direction: column-reverse;
@@ -340,28 +378,3 @@ No media query for `xs` since this is the default */
     height: 315px;
   }
 }
-
-
-/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
-/* Extra small devices (portrait phones, less than 576px) */
-/* @media (max-width: 575.98px) {
-
-} */
-
-/* Small devices (landscape phones, less than 768px) */
-/* @media (max-width: 767.98px) {
-  
-} */
-
-/* Medium devices (tablets, less than 992px) */
-/* @media (max-width: 991.98px) {
-
-} */
-
-/* Large devices (desktops, less than 1200px) */
-/* @media (max-width: 1199.98px) {
-
-} */
-
-/* Extra large devices (large desktops)
-No media query since the extra-large breakpoint has no upper bound on its width */
