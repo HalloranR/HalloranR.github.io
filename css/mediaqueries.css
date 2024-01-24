@@ -27,9 +27,6 @@
     .section-container {
         display: block;
     }
-    .arrow {
-        display: none;
-    }
     section,
     .section-container {
         height: fit-content;
@@ -45,10 +42,15 @@
     .about-containers {
         margin-top: 0;
     }
+    .about-container {
+        flex-direction: column;
+    }
 }
   
 @media screen and (max-width: 600px) {
-
+    .arrow {
+        display: none;
+    }
     #profile {
         height: 83vh;
         margin-bottom: 0;
@@ -103,5 +105,8 @@
         height: 225px;
         width: 300px;
         margin: auto 0;
+    }
+    form input, form textarea{
+        width: 80%;
     }
 }
