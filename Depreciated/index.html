@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- project title   -->
+    <title>Riley Halloran</title>
+
+    <!-- font awesome code -->
+    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
+
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <!-- header and nav bar -->
+
+
+    <nav>
+        <header>
+
+            <h1>Riley Halloran</h1>
+
+        </header>
+        <ul>
+            <!-- tripple bars to toggle on and off -->
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg"></i></li>
+            <li class="item"><a href="pages/projects.html">Projects</a></li>
+            <li class="item"><a href="pages/devblog.html">Dev Blog</a></li>
+            <li class="item"><a href="pages/about.html">About Me</a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <!-- actual website content -->
+    <main>
+        <div class="box">
+            <h1>Who I am</h1>
+            <section>
+                <p>Greetings, I am Riley Halloran, a Technical Designer and Gameplay Programmer currently working at NSWC Crane. I recently graduated Indiana Univertsity with a MS in 
+                    Computer Science and a BS in game design. I also published an independant game with a team of students called Erin and the Otherworld. </p>
+                     <div id="myface"></div>
+            </section>
+
+
+        </div>
+
+        <div class="box">
+            <h2>My Work</h2>
+            <div class="container">
+                <h3><a href="https://store.steampowered.com/app/2309090/Erin_and_the_Otherworld/">Erin and the Otherworld</a></h3>
+                <section>
+                    <p>This is a game I am currently working on with a team of fellow students. A Celtic themed, constellation drawing, rouge-lite card game where the player as Erin set about sealing the Otherworld to protect their home. 
+                        <form action="pages/projects.html">
+                            <button>Erin and the OtherWorld Steam Page</button>
+                        </form>
+                    </p>
+                        
+                    <div class="game1">
+                        <iframe src="https://www.youtube.com/embed/49Ia0IPrmW4"
+                            class="youtubes"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </section>
+                <p>As lead programmer for the game I had to balance a lot. My work focused mostly
+                    on
+                    implementing features for the game like
+                    a state machine, constellation drawing elements, and designing the project structure for the team. I worked
+                    in
+                    tandem with the team to communicate tasks between the programmers and designers. 
+                    During development I maintained code-writing-conventions in addition to writing documentation. Examples of my work can be seen following the title link.  </p>
+                <h3><a href="pages/projects.html">Madness Hunters</a></h3>
+                <section>
+                    <p>This is a cancelled project that me and a team of 4 were developing for 5 months. The game is a single
+                        player
+                        "yank-and-slash" rogue like where the player uses a grappling hook to pull around friendly
+                        companions in order to defeat an eldritch threat. My position for this game was the head programmer
+                        where I produced all the code and gameplay elements in the project. </p>
+                    <div class="game2">
+                        <iframe src="https://www.youtube.com/embed/CQdqdkaOYvY"
+                            class="youtubes"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h6>Find Me Here:</h6>
+        <a href="https://github.com/HalloranR"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/riley-halloran-454b58a0/"><i class="fa-brands fa-linkedin"></i></a>
+    </footer>
+
+    <!-- javascript -->
+    <script>
+        // once the dropdown is toggled, add the class 'show' to each menu item to reveal it
+        // if clicked again, toggle this effect by removing the 'show' class
+        function toggleDropdown() {
+            document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
+        }
+        // On the element with the class toggle, wait for it to be clicked, then toggle the dropdown
+        document.querySelector('.toggle').addEventListener('click', toggleDropdown);
+    </script>
+
+</body>
+
+</html>

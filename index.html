@@ -1,118 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- project title   -->
-    <title>Riley Halloran</title>
+    <!-- Link the stylesheets to the page -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+    
 
-    <!-- font awesome code -->
-    <script src="https://kit.fontawesome.com/bf37eaf948.js" crossorigin="anonymous"></script>
-
-    <!-- resets browser defaults -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <!-- custom css -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Riley Halloran Portfolio </title>
 </head>
-
 <body>
-    <!-- header and nav bar -->
 
+    <!-- Start of the nav -->
+    <nav id="desktop-nav">
 
-    <nav>
-        <header>
+        <div class="logo"> Riley Halloran</div>
 
-            <h1>Riley Halloran</h1>
+        <div>
+            <ul class="nav-links">
+                <li> <a href="#about"> About </a></li>
+                <li> <a href="#experience"> Experience </a></li>
+                <li> <a href="#projects"> Projects </a></li>
+                <li> <a href="#contact"> Contact </a></li>
+            </ul>
+        </div>
+    </nav>
 
-        </header>
-        <ul>
-            <!-- tripple bars to toggle on and off -->
-            <li class="toggle"><i class="fa-solid fa-bars fa-lg"></i></li>
-            <li class="item"><a href="pages/projects.html">Projects</a></li>
-            <li class="item"><a href="pages/devblog.html">Dev Blog</a></li>
-            <li class="item"><a href="pages/about.html">About Me</a></li>
-        </ul>
+    
+    <!-- Start of the mobile hamburger nav -->
+    <nav id="hamburger-nav">
+
+        <div class="logo"> Riley Halloran</div>
+
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="menu-links">
+                <li> <a href="#about" onclick="toggleMenu()"> About </a></li>
+                <li> <a href="#experience" onclick="toggleMenu()"> Experience </a></li>
+                <li> <a href="#projects" onclick="toggleMenu()"> Projects </a></li>
+                <li> <a href="#contact" onclick="toggleMenu()"> Contact </a></li>
+            </div>
+        </div>
     </nav>
 
 
+    <!-- introduction -->
+    <section id="profile">
 
-
-    <!-- actual website content -->
-    <main>
-        <div class="box">
-            <h1>Who I am</h1>
-            <section>
-                <p>Greetings, I am Riley Halloran, a Technical Designer and Gameplay Programmer currently working at NSWC Crane. I recently graduated Indiana Univertsity with a MS in 
-                    Computer Science and a BS in game design. I also published an independant game with a team of students called Erin and the Otherworld. </p>
-                     <div id="myface"></div>
-            </section>
-
-
+        <!-- headshot -->
+        <div class="section__pic-container">
+            <img 
+                src="images/APD_IULuddy_RileyHalloran02.jpg" 
+                alt="Riley Halloran headshot"
+                class="section__pic"
+                />
         </div>
 
-        <div class="box">
-            <h2>My Work</h2>
-            <div class="container">
-                <h3><a href="pages/projects.html">Erin and the Otherworld</a></h3>
-                <section>
-                    <p>This is a game I am currently working on with a team of fellow students. A Celtic themed, constellation drawing, rouge-lite card game where the player as Erin set about sealing the Otherworld to protect their home. 
-                        <a href="https://store.steampowered.com/app/2309090/Erin_and_the_Otherworld/">Erin and the OtherWorld Steam Page</a>
-                    </p>
-                        
-                    <div class="game1">
-                        <iframe src="https://www.youtube.com/embed/49Ia0IPrmW4"
-                            class="youtubes"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </section>
-                <p>As lead programmer for the game I had to balance a lot. My work focused mostly
-                    on
-                    implementing features for the game like
-                    a state machine, constellation drawing elements, and designing the project structure for the team. I worked
-                    in
-                    tandem with the team to communicate tasks between the programmers and designers. 
-                    During development I maintained code-writing-conventions in addition to writing documentation. Examples of my work can be seen following the title link.  </p>
-                <h3><a href="pages/projects.html">Madness Hunters</a></h3>
-                <section>
-                    <p>This is a cancelled project that me and a team of 4 were developing for 5 months. The game is a single
-                        player
-                        "yank-and-slash" rogue like where the player uses a grappling hook to pull around friendly
-                        companions in order to defeat an eldritch threat. My position for this game was the head programmer
-                        where I produced all the code and gameplay elements in the project. </p>
-                    <div class="game2">
-                        <iframe src="https://www.youtube.com/embed/CQdqdkaOYvY"
-                            class="youtubes"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </section>
+        <!-- Name and title -->
+        <div class="section__text">
+            <p class="section__text__p1">Greetings, I'am</p>
+            <h1 class="title">Riley Halloran</h1>
+            <p class="section__text__p2">Game Programmer</p>
+        
+        
+            <!-- Portfolio buttons -->
+            <div class="btn-container">
+                <button 
+                    class="btn btn-color-2" 
+                    onclick="window.open('images/Halloran_Riley_Resume.pdf')">
+                    Download CV
+                </button>
+
+                <button 
+                    class="btn btn-color-1" 
+                    onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+
+            <div id="socials-container">
+                <img 
+                    src="images/linkedin.png"
+                    alt="My LinkedIn profile"
+                    class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/riley-halloran-454b58a0/'"
+                />
+
+                <img 
+                    src="images/github.png"
+                    alt="My GitHub profile"
+                    class="icon"
+                    onclick="location.href='https://github.com/HalloranR'"
+                />
             </div>
         </div>
-    </main>
 
-    <footer>
-        <h6>Find Me Here:</h6>
-        <a href="https://github.com/HalloranR"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/riley-halloran-454b58a0/"><i class="fa-brands fa-linkedin"></i></a>
-    </footer>
+    </section>
 
-    <!-- javascript -->
+    
+    <!-- About Section-->
+    <section id="about">
+        <!-- Reuse the structure from earlier -->
+        <p class="section__text__p1">Get to know more</p>
+        <h1 class="title">About Me</h1>
+
+        <div class="section-container">
+
+            <div class="section__pic-container-2">
+                <img
+                    src="images/headshot.jpg"
+                    alt="Profile picture of me"
+                    class="about-pic"
+                />
+            </div>
+
+            <div class="about-details-container">
+                
+                <!-- Div section for the bubbles of experience and education-->
+                <div class="about-container">
+                    <div class="details-container">
+                        <img
+                            src="images/experience.png"
+                            alt="Experience icon"
+                            class="icon"
+                        />
+                        <h3>Experience</h3>
+                        <p2>2+ years <br />Game Development</p2>
+                    </div>
+                    
+                    <div class="details-container">
+                        <img
+                            src="images/education.png"
+                            alt="Education icon"
+                            class="icon"
+                        />
+                        <h3>Education</h3>
+                        <p2>M.S. Computer Science <br />B.S. Game Design</p2>
+                    </div>
+                </div>
+                
+                <!-- Div for the about me text -->
+                <div class="text-container">
+                    <p> About me: Ispasi
+                        udjfhgiuasrhgoi 
+                        [hrsgoiuhsrrghsa
+                        oighsaohsdfoauh sruhgposafh gsfaohg safgh sahg soai[ihfseaoifh saghsoi[hgaSGHO SAGOOSAF GSA SA GS GSA SAF[GIOAS[GHSAHG ASGH</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Arrow to move to the next section-->
+        <img 
+            src="images/arrow.png"
+            onclick="location.href='./#experience'"
+            class="icon arrow"
+        />
+
+
+    </section>
+
+
+    <!-- Experience Section-->
+    <section id="experience">
+        <!-- Reuse the structure from earlier -->
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+
+        <div class="experience-details-container">
+            
+            <!-- Div section for the bubbles of work and skils -->
+            <div class="about-container">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Positions Held</h2>
+
+                    <div class="article-container">
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>NSWC Crane</h1>
+                                <p>Data Scientist: Current</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>Cyberinfrastructure for Network Science Center</h1>
+                                <p>Unity Developer: July 2022 - May 2023 </p>
+                            </div>
+                        </article>
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>IU Rec Sports</h1>
+                                <p>Swim Instructor: May 2018 - May 2023</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>IU Residental Life</h1>
+                                <p>Residental Assistant: August 2020 - May 2021</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Skills</h2>
+
+                    <div class="article-container">
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>Unity</h1>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>C#</h1>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>Python</h1>
+                                <p>SIntermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>Unreal</h1>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>C++</h1>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img 
+                                src="images/checkmark.png"
+                                alt="Positions Held Icon"
+                                class="icon"
+                            />
+                            <div>
+                                <h1>HLSL</h1>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Arrow to move to the next section-->
+        <img 
+            src="images/arrow.png"
+            onclick="location.href='./#projects'"
+            class="icon arrow"
+        />
+
+
+    </section>
+
+
+    <!-- Projects Section-->
+    <section id="projects">
+        <!-- Reuse the structure from earlier -->
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+
+        <div class="experience-details-container">
+            
+            <!-- Div section for the bubbles of work and skils -->
+            <div class="about-container">
+                <div class="details-container color-container">
+
+                    <div class="article-container">
+                        <img
+                            src="images/eo-screenshot.png"
+                            alt="Screenshot from my game Erin and the Otherworld"
+                            class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Erin and the Otherworld</h2>
+
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Github
+                        </button>
+
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="details-container color-container">
+
+                    <div class="article-container">
+                        <img
+                            src="images/mh-pull.png"
+                            alt="Screenshot from my prototype Madness Hunters"
+                            class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Madness Hunters</h2>
+
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Github
+                        </button>
+
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="details-container color-container">
+
+                    <div class="article-container">
+                        <img
+                            src="images/Dijkstra_2.png"
+                            alt="Screenshot from my game Erin and the Otherworld"
+                            class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Dijkstra Demonstration </h2>
+
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Github
+                        </button>
+
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Arrow to move to the next section-->
+        <img 
+            src="images/arrow.png"
+            onclick="location.href='./#contact'"
+            class="icon arrow"
+        />
+        
+    </section>
+
+    <!-- Contact Me Section-->
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <hi class="title">Contact Me</hi>
+
+        <div class="contact-container">
+            <div class="row">
+                <div class="contact-left">
+                    
+                    <h1>Sub </h1>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-color-1 contact-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li> <a href="#about"> About </a></li>
+                        <li> <a href="#experience"> Experience </a></li>
+                        <li> <a href="#projects"> Projects </a></li>
+                        <li> <a href="#contact"> Contact </a></li>
+                    </ul>
+        
+                </div>
+            </nav>
+
+            <p> Copyright &#169; 2024 Riley Halloran. All Rights Reserved.</p>
+        </footer>
+    </section>
+
+    
+
+    <!-- Link jss functionality-->
+    <script src="js/script.js"></script>
+
+
+    <!--Google forms functionality-->
     <script>
-        // once the dropdown is toggled, add the class 'show' to each menu item to reveal it
-        // if clicked again, toggle this effect by removing the 'show' class
-        function toggleDropdown() {
-            document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
-        }
-        // On the element with the class toggle, wait for it to be clicked, then toggle the dropdown
-        document.querySelector('.toggle').addEventListener('click', toggleDropdown);
-    </script>
-
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyZYQA3SgrmOfvqJpNK5dtJQtMOv0V0dD4jdlg__XnUOBNyqDcN4K_58L4qG89f55-G/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
-
 </html>
