@@ -299,6 +299,8 @@ section {
 
 #about {
     position: relative;
+
+    justify-content: center;
 }
 
 .about-container {
