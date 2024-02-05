@@ -21,9 +21,9 @@
 
         <div>
             <ul class="nav-links">
-                <li> <a href="#about"> About </a></li>
+                <li> <a href="#projects"> Projects </a></li>                
                 <li> <a href="#experience"> Experience </a></li>
-                <li> <a href="#projects"> Projects </a></li>
+                <li> <a href="#about"> About </a></li>
                 <li> <a href="#contact"> Contact </a></li>
             </ul>
         </div>
@@ -43,9 +43,9 @@
             </div>
 
             <div class="menu-links">
-                <li> <a href="#about" onclick="toggleMenu()"> About </a></li>
+                <li> <a href="#projects" onclick="toggleMenu()"> Projects </a></li>                
                 <li> <a href="#experience" onclick="toggleMenu()"> Experience </a></li>
-                <li> <a href="#projects" onclick="toggleMenu()"> Projects </a></li>
+                <li> <a href="#about" onclick="toggleMenu()"> About </a></li>
                 <li> <a href="#contact" onclick="toggleMenu()"> Contact </a></li>
             </div>
         </div>
@@ -105,57 +105,94 @@
 
     </section>
 
-    
-    <!-- About Section-->
-    <section id="about">
+    <!-- Projects Section-->
+    <section id="projects">
         <!-- Reuse the structure from earlier -->
-        <p class="section__text__p1">Get to know more</p>
-        <h1 class="title">About Me</h1>
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
 
-        <div class="section-container">
+        <div class="experience-details-container">
+            
+            <!-- Div section for the bubbles of work and skils -->
+            <div class="about-container">
+                <div class="details-container color-container">
 
-            <div class="section__pic-container-2">
-                <img
-                    src="images/headshot.jpg"
-                    alt="Profile picture of me"
-                    class="about-pic"
-                />
-            </div>
-
-            <div class="about-details-container">
-                
-                <!-- Div section for the bubbles of experience and education-->
-                <div class="about-container">
-                    <div class="details-container">
+                    <div class="article-container">
                         <img
-                            src="images/experience.png"
-                            alt="Experience icon"
-                            class="icon"
+                            src="images/Header Capsule.png"
+                            alt="Screenshot from my game Erin and the Otherworld"
+                            class="project-img"
                         />
-                        <h3>Experience</h3>
-                        <p2>2+ years <br />Game Development</p2>
                     </div>
-                    
-                    <div class="details-container">
-                        <img
-                            src="images/education.png"
-                            alt="Education icon"
-                            class="icon"
-                        />
-                        <h3>Education</h3>
-                        <p2>M.S. Computer Science <br />B.S. Game Design</p2>
+                    <h2 class="experience-sub-title project-title">Erin and the Otherworld</h2>
+
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://store.steampowered.com/app/2309090/Erin_and_the_Otherworld/'"
+                        > Steam Page
+                        </button>
+
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Dev Blog
+                        </button>
                     </div>
                 </div>
                 
-                <!-- Div for the about me text -->
-                <div class="text-container">
-                    <p> I am a Game Programmer with intrests in games AI, graphics programming, and network science.
-                        
-                        I love fiddling with systems and values to find the game feel that fits what I am making. 
+                <div class="details-container color-container">
 
-                        My best traits are that I am a strong problem solver especially when it comes to debugging and I am a quick learner that synthesize information from multiple sources to decide on the best implementation.
-                        </p>
+                    <div class="article-container">
+                        <img
+                            src="images/Title_Art.PNG"
+                            alt="Screenshot from my prototype Madness Hunters"
+                            class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Madness Hunters</h2>
+
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/HalloranR/MH-Prototype'"
+                        > Github
+                        </button>
+
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Learn More
+                        </button>
+                    </div>
                 </div>
+
+                <div class="details-container color-container">
+
+                    <div class="article-container">
+                        <img
+                            src="images/Dijkstra_2.png"
+                            alt="Screenshot from my game Erin and the Otherworld"
+                            class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Dijkstra Demonstration </h2>
+
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Github
+                        </button>
+
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Learn More
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -165,9 +202,9 @@
             onclick="location.href='./#experience'"
             class="icon arrow"
         />
-
-
+        
     </section>
+    
 
 
     <!-- Experience Section-->
@@ -307,7 +344,7 @@
         <!--Arrow to move to the next section-->
         <img 
             src="images/arrow.png"
-            onclick="location.href='./#projects'"
+            onclick="location.href='./#about'"
             class="icon arrow"
         />
 
@@ -315,94 +352,60 @@
     </section>
 
 
-    <!-- Projects Section-->
-    <section id="projects">
+    
+
+
+
+    <!-- About Section-->
+    <section id="about">
         <!-- Reuse the structure from earlier -->
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
+        <p class="section__text__p1">Get to know more</p>
+        <h1 class="title">About Me</h1>
 
-        <div class="experience-details-container">
-            
-            <!-- Div section for the bubbles of work and skils -->
-            <div class="about-container">
-                <div class="details-container color-container">
+        <div class="section-container">
 
-                    <div class="article-container">
+            <div class="section__pic-container-2">
+                <img
+                    src="images/headshot.jpg"
+                    alt="Profile picture of me"
+                    class="about-pic"
+                />
+            </div>
+
+            <div class="about-details-container">
+                
+                <!-- Div section for the bubbles of experience and education-->
+                <div class="about-container">
+                    <div class="details-container">
                         <img
-                            src="images/eo-screenshot.png"
-                            alt="Screenshot from my game Erin and the Otherworld"
-                            class="project-img"
+                            src="images/experience.png"
+                            alt="Experience icon"
+                            class="icon"
                         />
+                        <h3>Experience</h3>
+                        <p2>2+ years <br />Game Development</p2>
                     </div>
-                    <h2 class="experience-sub-title project-title">Erin and the Otherworld</h2>
-
-                    <div class="btn-container">
-                        <button
-                            class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://store.steampowered.com/app/2309090/Erin_and_the_Otherworld/'"
-                        > Steam Page
-                        </button>
-
-                        <button
-                            class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com'"
-                        > Dev Blog
-                        </button>
+                    
+                    <div class="details-container">
+                        <img
+                            src="images/education.png"
+                            alt="Education icon"
+                            class="icon"
+                        />
+                        <h3>Education</h3>
+                        <p2>M.S. Computer Science <br />B.S. Game Design</p2>
                     </div>
                 </div>
                 
-                <div class="details-container color-container">
+                <!-- Div for the about me text -->
+                <div class="text-container">
+                    <p> I am a Game Programmer with intrests in games AI, graphics programming, and network science.
+                        
+                        I love fiddling with systems and values to find the game feel that fits what I am making. 
 
-                    <div class="article-container">
-                        <img
-                            src="images/mh-pull.png"
-                            alt="Screenshot from my prototype Madness Hunters"
-                            class="project-img"
-                        />
-                    </div>
-                    <h2 class="experience-sub-title project-title">Madness Hunters</h2>
-
-                    <div class="btn-container">
-                        <button
-                            class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com'"
-                        > Github
-                        </button>
-
-                        <button
-                            class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com'"
-                        > Learn More
-                        </button>
-                    </div>
+                        My best traits are that I am a strong problem solver especially when it comes to debugging and I am a quick learner that synthesize information from multiple sources to decide on the best implementation.
+                        </p>
                 </div>
-
-                <div class="details-container color-container">
-
-                    <div class="article-container">
-                        <img
-                            src="images/Dijkstra_2.png"
-                            alt="Screenshot from my game Erin and the Otherworld"
-                            class="project-img"
-                        />
-                    </div>
-                    <h2 class="experience-sub-title project-title">Dijkstra Demonstration </h2>
-
-                    <div class="btn-container">
-                        <button
-                            class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com'"
-                        > Github
-                        </button>
-
-                        <button
-                            class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com'"
-                        > Learn More
-                        </button>
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -412,7 +415,8 @@
             onclick="location.href='./#contact'"
             class="icon arrow"
         />
-        
+
+
     </section>
 
     <!-- Contact Me Section-->

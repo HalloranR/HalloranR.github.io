@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link the stylesheets to the page -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+    
+
+    <title>Erin and the Otherworld Blog </title>
+</head>
+<body>
+
+    <!-- Start of the nav -->
+    <nav id="desktop-nav">
+
+        <div class="logo"> Riley Halloran</div>
+
+        <div>
+            <ul class="nav-links">
+                <li> <a href="#projects"> Projects </a></li>                
+                <li> <a href="#experience"> Experience </a></li>
+                <li> <a href="#about"> About </a></li>
+                <li> <a href="#contact"> Contact </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <!-- Start of the mobile hamburger nav -->
+    <nav id="hamburger-nav">
+
+        <div class="logo"> Riley Halloran</div>
+
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="menu-links">
+                <li> <a href="#projects" onclick="toggleMenu()"> Projects </a></li>                
+                <li> <a href="#experience" onclick="toggleMenu()"> Experience </a></li>
+                <li> <a href="#about" onclick="toggleMenu()"> About </a></li>
+                <li> <a href="#contact" onclick="toggleMenu()"> Contact </a></li>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- introduction -->
+    <section id="profile">
+
+        <!-- headshot -->
+        <div class="section__pic-container">
+            <img 
+                src="images/Promo Poster7.png" 
+                alt="Riley Halloran headshot"
+                class="section__pic"
+                />
+        </div>
+
+        <!-- Name and title -->
+        <div class="section__text">
+            <p class="section__text__p1">My experience creating</p>
+            <h1 class="title">Erin and the Otherworld</h1>
+            <p class="section__text__p2">As Lead Programmer</p>
+        
+        
+            <!-- Portfolio buttons -->
+            <div class="btn-container">
+
+                <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://store.steampowered.com/app/2309090/Erin_and_the_Otherworld/'">
+                    Steam Page
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="Intro">
+        <!-- Reuse the structure from earlier -->
+        <p class="section__text__p1">What is</p>
+        <h1 class="title">Erin and the Otherworld?</h1>
+
+        <div class="experience-details-container">
+
+            <div class="game">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/49Ia0IPrmW4?si=WyTEOJpSCgEI_63U" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+            </div>
+            
+            <!-- Div section for the bubbles of work and skils -->
+            <div class="about-container">
+                <div class="details-container color-container">
+
+                    <div class="article-container">
+                        <img
+                            src="images/Header Capsule.png"
+                            alt="Screenshot from my game Erin and the Otherworld"
+                            class="project-img"
+                        />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Erin and the Otherworld</h2>
+
+                    <div class="btn-container">
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://store.steampowered.com/app/2309090/Erin_and_the_Otherworld/'"
+                        > Steam Page
+                        </button>
+
+                        <button
+                            class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com'"
+                        > Dev Blog
+                        </button>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+
+    <section>
+        <!-- Footer-->
+        <footer>
+            <nav>
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li> <a href="#about"> About </a></li>
+                        <li> <a href="#experience"> Experience </a></li>
+                        <li> <a href="#projects"> Projects </a></li>
+                        <li> <a href="#contact"> Contact </a></li>
+                    </ul>
+        
+                </div>
+            </nav>
+
+            <p> Copyright &#169; 2024 Riley Halloran. All Rights Reserved.</p>
+        </footer>
+</section>
+
+    <!-- Link jss functionality-->
+    <script src="js/script.js"></script>
+
+    <!--Link to font awesone-->
+    <script src="https://kit.fontawesome.com/b204d30cc1.js" crossorigin="anonymous"></script>
+</body>
+</html>
